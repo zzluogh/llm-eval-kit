@@ -8,7 +8,7 @@
   - exact_match:           工具名 + 所有参数完全正确
 
 用法:
-    from my_math.tool_calling_eval import evaluate, ToolCallSample, ToolDef
+    from llm_eval.tool_calling_eval import evaluate, ToolCallSample, ToolDef
     samples = [ToolCallSample(query="...", tools_available=[...], ...)]
     result = evaluate(samples)
     print(result.report())

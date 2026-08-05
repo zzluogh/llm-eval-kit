@@ -6,7 +6,7 @@
   - mock_model_query: 本地模拟检索（无需GPU）
 
 典型用法:
-    >>> from my_math.needle_haystack import run_test_suite, mock_model_query, compute_accuracy
+    >>> from llm_eval.needle_haystack import run_test_suite, mock_model_query, compute_accuracy
     >>> results = run_test_suite([100, 500], [0.0, 0.5, 1.0], mock_model_query)
     >>> compute_accuracy(results)
     1.0

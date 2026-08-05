@@ -7,7 +7,7 @@
   Q7~Q8: 极端输入（空 context、极短回答）
   Q9~Q10: 多段落上下文 + 部分相关
 """
-from my_math.ragas_eval import RAGSample
+from llm_eval.ragas_eval import RAGSample
 
 
 SAMPLES = [

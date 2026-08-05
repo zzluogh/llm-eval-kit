@@ -6,19 +6,15 @@
   - evaluate 批量聚合 + 报告生成
   - 10 组完整样本评测
 """
-import sys
 import math
-from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import pytest
-from my_math.ragas_eval import (
+from llm_eval.ragas_eval import (
     _tokenize, _overlap_ratio, _cosine_similarity, _sentence_tokenize,
     faithfulness, answer_relevancy, context_recall, context_precision,
     evaluate_sample, evaluate, RAGSample, MetricScores,
 )
-from ragas_samples import SAMPLES
+from llm_eval.ragas_samples import SAMPLES
 
 
 # ---------------------------------------------------------------------------

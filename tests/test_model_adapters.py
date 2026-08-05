@@ -1,15 +1,13 @@
 """第 29 课-2 模型适配器 — 单元测试。"""
 import sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import pytest
-from my_math.model_adapters import (
+from llm_eval.model_adapters import (
     rule_based_predict, error_prone_predict, model_predict,
     _TOOL_KEYWORDS, _PARAM_EXTRACTORS, _TOOL_PARAMS,
 )
-from my_math.tool_calling_eval import ToolDef
+from llm_eval.tool_calling_eval import ToolDef
 
 
 WEATHER_TOOL = ToolDef("get_weather", "Get weather", {"city": "str"})

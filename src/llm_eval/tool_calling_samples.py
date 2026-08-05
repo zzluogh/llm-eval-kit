@@ -3,7 +3,7 @@
 覆盖 9 种场景：完美匹配 / 工具选错 / 参数缺少 / 参数多余 /
 参数值错误 / 部分正确 / 大小写容忍 / 空响应 / 可选参数。
 """
-from my_math.tool_calling_eval import ToolDef, ToolCallSample
+from llm_eval.tool_calling_eval import ToolDef, ToolCallSample
 
 # ---------------------------------------------------------------------------
 # 工具定义（9 个行业常见工具）

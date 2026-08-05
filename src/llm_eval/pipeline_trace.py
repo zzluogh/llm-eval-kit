@@ -11,7 +11,7 @@
   本地 trace = 一串 TraceStep (retrieval → generation → answer)
 
 用法:
-    from my_math.pipeline_trace import trace_rag_pipeline
+    from llm_eval.pipeline_trace import trace_rag_pipeline
     trace = trace_rag_pipeline(
         query="What is Nav2?",
         contexts=["Nav2 is a navigation framework for ROS2."],

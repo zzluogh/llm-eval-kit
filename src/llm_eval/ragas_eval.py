@@ -8,7 +8,7 @@
   - context_precision: 检索结果中有多少与问题相关
 
 用法:
-    from my_math.ragas_eval import evaluate, RAGSample, RAGEvalResult
+    from llm_eval.ragas_eval import evaluate, RAGSample, RAGEvalResult
     samples = [RAGSample(question="...", contexts=["..."], answer="...", ground_truth="...")]
     result = evaluate(samples)
     print(result.report())

@@ -1,9 +1,8 @@
 import sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 import pytest
-from my_math.needle_haystack import (
+from llm_eval.needle_haystack import (
     generate_hay,
     estimate_tokens,
     generate_needle,

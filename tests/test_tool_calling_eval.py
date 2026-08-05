@@ -9,17 +9,15 @@
 """
 import sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import pytest
-from my_math.tool_calling_eval import (
+from llm_eval.tool_calling_eval import (
     ToolDef, ToolCallSample, ToolCallScores, ToolCallEvalResult,
     _normalize_tool_name, _compare_params, _safe_f1,
     tool_name_accuracy, param_precision, param_recall, param_f1,
     exact_match_score, evaluate_sample, evaluate,
 )
-from tool_calling_samples import SAMPLES, PARAM_SYNONYMS
+from llm_eval.tool_calling_samples import SAMPLES, PARAM_SYNONYMS
 
 
 # ---------------------------------------------------------------------------

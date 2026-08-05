@@ -8,7 +8,7 @@
   - extra_params:     幻觉多余参数
 
 用法:
-    from my_math.pipeline_trace_adapter import adapt_sample, evaluate_and_diagnose
+    from llm_eval.pipeline_trace_adapter import adapt_sample, evaluate_and_diagnose
     trace = adapt_sample(sample)
     print(trace.report())
     print(trace.diagnose())
@@ -18,8 +18,8 @@ import time
 from dataclasses import dataclass
 from typing import List, Dict, Tuple, Set, Any
 
-from my_math.tool_calling_eval import ToolCallSample, ToolDef
-from my_math.pipeline_trace import (           # noqa: E402
+from llm_eval.tool_calling_eval import ToolCallSample, ToolDef
+from llm_eval.pipeline_trace import (           # noqa: E402
     PipelineTrace, TraceStep, Failure,         # 数据结构
     _tokenize, _meaningful_tokens,              # 工具函数
     detect_hallucination, detect_empty_context,  # 通用检测器
@@ -27,8 +27,8 @@ from my_math.pipeline_trace import (           # noqa: E402
     diagnose_all, DiagnosisSummary,
 )
 
-from my_math.ragas_eval import RAGSample
-from my_math.model_adapters import rule_based_predict, error_prone_predict
+from llm_eval.ragas_eval import RAGSample
+from llm_eval.model_adapters import rule_based_predict, error_prone_predict
 
 # ============================================================================
 # 工具调用专用检测器（排障五步法"① 复现症状"→ 具体检测规则）

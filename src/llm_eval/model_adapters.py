@@ -8,14 +8,14 @@
     error_prone_predict:    有意引入错误, 低准确率 (~50%)
 
 用法:
-    from my_math.model_adapters import rule_based_predict, error_prone_predict
-    from my_math.tool_calling_eval import ToolDef
+    from llm_eval.model_adapters import rule_based_predict, error_prone_predict
+    from llm_eval.tool_calling_eval import ToolDef
     tool, params = rule_based_predict("weather in Beijing?", [weather_tool])
 """
 import re
 import random
 from typing import List, Dict, Tuple, Any
-from my_math.tool_calling_eval import ToolDef
+from llm_eval.tool_calling_eval import ToolDef
 
 
 # ---------------------------------------------------------------------------

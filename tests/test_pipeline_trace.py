@@ -10,13 +10,11 @@
 """
 import sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import pytest
 
 # ---- 框架层 ----
-from my_math.pipeline_trace import (
+from llm_eval.pipeline_trace import (
     _tokenize, _overlap_ratio, _meaningful_tokens, _sentence_split,
     TraceStep, Failure, PipelineTrace,
     detect_hallucination, detect_empty_context, detect_irrelevant_context,
@@ -24,15 +22,15 @@ from my_math.pipeline_trace import (
     diagnose_all, trace_rag_pipeline,
 )
 # ---- 适配层 ----
-from my_math.pipeline_trace_adapter import (
+from llm_eval.pipeline_trace_adapter import (
     detect_tool_mismatch, detect_param_value_error,
     detect_missing_params, detect_extra_params,
     adapt_sample, evaluate_and_diagnose, DiagnosisSummary,
 )
 # ---- 数据层 ----
-from my_math.tool_calling_eval import ToolCallSample, ToolDef
-from tool_calling_samples import SAMPLES, TOOLS
-from my_math.model_adapters import rule_based_predict, error_prone_predict
+from llm_eval.tool_calling_eval import ToolCallSample, ToolDef
+from llm_eval.tool_calling_samples import SAMPLES, TOOLS
+from llm_eval.model_adapters import rule_based_predict, error_prone_predict
 
 
 # ============================================================================
